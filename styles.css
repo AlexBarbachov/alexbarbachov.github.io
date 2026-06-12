@@ -274,6 +274,12 @@ li { margin-bottom: 10px; }
   border: 0;
 }
 
+.video-caption {
+  margin: -10px 0 18px;
+  color: var(--muted);
+  font-weight: 600;
+}
+
 .academic-layout {
   display: grid;
   grid-template-columns: 240px 1fr;
