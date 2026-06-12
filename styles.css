@@ -88,6 +88,10 @@ a:hover { text-decoration: underline; }
   margin: 70px auto 80px;
 }
 
+.hero-content {
+  max-width: 1060px;
+}
+
 .eyebrow {
   color: var(--red);
   font-family: 'Montserrat', Arial, sans-serif;
@@ -176,13 +180,15 @@ main {
 .card { padding: 30px; }
 
 .card > h2:first-child {
-  padding-top: 14px;
+  padding-top: 0;
+}
+
+main > .card:first-child {
+  padding-top: 44px;
 }
 
 .card-heading {
   display: flex;
-  min-height: 76px;
-  padding-top: 6px;
   gap: 18px;
   align-items: center;
   justify-content: space-between;
