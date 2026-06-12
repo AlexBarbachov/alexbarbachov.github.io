@@ -133,6 +133,11 @@ h2 {
   margin-top: 28px;
 }
 
+.hero-actions .button {
+  width: 260px;
+  text-align: center;
+}
+
 .button {
   display: inline-block;
   padding: 12px 20px;
@@ -271,12 +276,45 @@ li { margin-bottom: 10px; }
   margin: 0;
 }
 
-.tournament-grid { grid-template-columns: repeat(2, 1fr); }
+.tournament-grid {
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0;
+  margin: 0 -30px -30px;
+}
 
-.tournament h3 {
-  margin: 6px 0;
+.tournament {
+  display: flex;
+  gap: 22px;
+  align-items: center;
+  padding: 30px;
+  color: var(--text);
+}
+
+.tournament:hover {
+  background: var(--offwhite);
+  text-decoration: none;
+}
+
+.tournament-logo {
+  width: 92px;
+  height: 92px;
+  flex: 0 0 auto;
+  object-fit: contain;
+}
+
+.tournament-details {
+  display: grid;
+  gap: 6px;
+}
+
+.tournament-details strong {
   color: var(--black);
-  text-transform: uppercase;
+  font-size: 1.1rem;
+}
+
+.tournament-division {
+  color: var(--text);
+  font-weight: 600;
 }
 
 .contact-card {
@@ -320,6 +358,41 @@ footer {
   .tournament-grid { grid-template-columns: 1fr; }
   .hero-content { margin: 44px auto 60px; }
   .card-logo-wide { width: 130px; }
+
+  .hero-actions .button {
+    width: min(100%, 320px);
+  }
+
+  .stats-grid {
+    gap: 0;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-top: 4px solid var(--red);
+    box-shadow: var(--shadow);
+  }
+
+  .stats-grid .stat {
+    display: grid;
+    grid-template-columns: minmax(130px, 0.8fr) minmax(0, 1.2fr);
+    gap: 18px;
+    align-items: center;
+    border: 0;
+    border-bottom: 1px solid var(--border);
+    box-shadow: none;
+  }
+
+  .stats-grid .stat strong {
+    margin-top: 0;
+  }
+
+  .stats-grid .stat:last-child {
+    border-bottom: 0;
+  }
+
+  .tournament-logo {
+    width: 80px;
+    height: 80px;
+  }
 }
 
 /* Club achievements timeline */
