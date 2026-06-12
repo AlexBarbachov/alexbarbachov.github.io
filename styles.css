@@ -261,6 +261,19 @@ li { margin-bottom: 10px; }
   border-left: 10px solid var(--red);
 }
 
+.video-embed {
+  width: min(100%, 560px);
+  margin: 22px 0;
+  aspect-ratio: 16 / 9;
+  background: var(--black);
+}
+
+.video-embed iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
 .academic-layout {
   display: grid;
   grid-template-columns: 240px 1fr;
@@ -312,8 +325,17 @@ li { margin-bottom: 10px; }
   font-size: 1.1rem;
 }
 
-.tournament-division {
-  color: var(--text);
+.schedule-meta {
+  margin: -8px 0 22px;
+  color: var(--red);
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.055em;
+  text-transform: uppercase;
+}
+
+.tournament-schedule {
+  color: var(--red-dark);
   font-weight: 600;
 }
 
