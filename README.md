@@ -5,19 +5,22 @@ deployment as a GitHub Pages user site.
 
 ## Site
 
-Once published from the `alexbarbachov/alexbarbachov.github.io` repository, the
-site will be available at:
+Once published from the `AlexBarbachov/alexbarbachov.github.io` repository, the
+recruiting profile will be available at:
 
-<https://alexbarbachov.github.io>
+<https://alexbarbachov.github.io/mit/>
+
+The root URL, <https://alexbarbachov.github.io/>, redirects to the profile.
 
 ## Pages
 
-- `index.html`: recruiting overview and contact information
-- `videos.html`: videos and highlights
-- `club-achievements.html`: club volleyball achievements
-- `high-school-achievements.html`: high school volleyball achievements
-- `academic-profile.html`: academic profile
-- `styles.css`: shared site styles
+- `index.html`: root redirect to `/mit/`
+- `mit/index.html`: recruiting overview and contact information
+- `mit/videos.html`: videos and highlights
+- `mit/club-achievements.html`: club volleyball achievements
+- `mit/high-school-achievements.html`: high school volleyball achievements
+- `mit/academic-profile.html`: academic profile
+- `mit/styles.css`: shared site styles
 
 ## Publish
 
