@@ -8,9 +8,9 @@ deployment as a GitHub Pages user site.
 Once published from the `AlexBarbachov/alexbarbachov.github.io` repository, the
 recruiting profile will be available at:
 
-<https://alexbarbachov.github.io/mit/>
+<https://www.alexbarbachov.com/mit/>
 
-The root URL, <https://alexbarbachov.github.io/>, redirects to the profile.
+The root URL, <https://www.alexbarbachov.com/>, redirects to the profile.
 
 ## Pages
 
