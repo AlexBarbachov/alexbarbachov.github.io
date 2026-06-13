@@ -383,6 +383,8 @@ footer {
 .subpage-title h1 { font-size: clamp(2.5rem, 7vw, 5rem); }
 .subpage-main { margin-top: 14px; }
 .detail-card { max-width: 900px; margin: 0 auto; }
+.subpage-main .detail-card { padding-top: 22px; }
+.detail-card .club-team-group:first-child { margin-top: 0; }
 .detail-list li { margin-bottom: 14px; }
 
 @media (max-width: 800px) {
@@ -432,23 +434,6 @@ footer {
 
 .club-team-group {
   margin: 30px 0 34px;
-}
-
-.club-title {
-  display: flex;
-  align-items: center;
-  gap: 26px;
-}
-
-.club-title h1 {
-  margin: 0;
-}
-
-.club-title img {
-  width: 180px;
-  height: 82px;
-  flex: 0 0 auto;
-  object-fit: contain;
 }
 
 .club-team-heading {
@@ -611,31 +596,18 @@ footer {
     padding-top: 10px;
   }
 
-  .club-title {
-    gap: 14px;
-  }
-
-  .club-title img {
-    width: 102px;
-    height: 52px;
-  }
-
-  .club-title h1 {
-    font-size: 1.95rem;
-    white-space: nowrap;
-  }
-
   .event-card {
     grid-template-columns: 86px minmax(0, 1fr);
     grid-template-areas: "placement details";
     gap: 14px 18px;
+    align-items: start;
     min-height: 0;
     padding: 15px 18px;
     border-radius: 16px;
   }
 
   .event-placement {
-    align-self: end;
+    align-self: start;
     align-items: flex-start;
     flex-direction: column;
     gap: 6px;
@@ -670,12 +642,14 @@ footer {
   }
 
   .event-details {
+    align-self: start;
     padding-left: 18px;
   }
 
   .event-details::before {
     height: 68px;
   }
+
 }
 
 /* Lighter recruiting-site typography overrides */
