@@ -18,7 +18,7 @@ The root URL, <https://alexbarbachov.github.io/>, redirects to the profile.
 - `mit/index.html`: recruiting overview and contact information
 - `mit/videos.html`: videos and highlights
 - `mit/club-achievements.html`: club volleyball achievements
-- `mit/high-school-achievements.html`: high school volleyball achievements
+- `mit/high-school-accolades.html`: high school volleyball accolades
 - `mit/academic-profile.html`: academic profile
 - `mit/styles.css`: shared site styles
 

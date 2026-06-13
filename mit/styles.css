@@ -447,6 +447,99 @@ footer {
   gap: 16px;
 }
 
+.school-accolade-grid {
+  display: grid;
+  gap: 16px;
+}
+
+.school-heading {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.school-heading img {
+  width: 64px;
+  height: 64px;
+  flex: 0 0 auto;
+  object-fit: contain;
+}
+
+.school-heading h2 {
+  margin: 0;
+}
+
+.school-site-link {
+  display: inline-block;
+  margin-top: 4px;
+  color: var(--red-dark);
+  font-family: 'Inter', Arial, sans-serif;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.school-accolade-card {
+  display: grid;
+  grid-template-columns: 100px minmax(0, 1fr);
+  align-items: center;
+  gap: 24px;
+  min-height: 110px;
+  padding: 22px 26px;
+  background: linear-gradient(110deg, #f2f2f2 0%, #e9e9e9 100%);
+  border: 1px solid #dedede;
+  border-radius: 20px;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.10);
+}
+
+.school-accolade-card h3 {
+  margin: 0;
+  color: var(--black);
+  font-size: 1.22rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.school-accolade-card p {
+  margin: 4px 0 0;
+  color: var(--muted);
+  line-height: 1.35;
+}
+
+.school-accolade-image {
+  width: 100px;
+  height: 112px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.14);
+}
+
+.school-accolade-image-landscape {
+  object-fit: contain;
+  background: var(--white);
+}
+
+.school-accolade-marker {
+  width: 100px;
+  min-height: 76px;
+}
+
+.school-accolade-details {
+  position: relative;
+  min-width: 0;
+  padding-left: 25px;
+}
+
+.school-accolade-details::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 1px;
+  height: 76px;
+  background: #c7c7c7;
+  transform: translateY(-50%);
+}
+
 .event-card {
   display: grid;
   grid-template-columns: 170px minmax(0, 1fr) 112px;
@@ -640,6 +733,39 @@ footer {
   .event-card > .event-logo,
   .event-card > .event-logo-wide {
     display: none !important;
+  }
+
+  .school-accolade-card {
+    grid-template-columns: 76px minmax(0, 1fr);
+    gap: 16px;
+  }
+
+  .school-heading {
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .school-heading img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .school-accolade-image {
+    width: 76px;
+    height: 92px;
+  }
+
+  .school-accolade-marker {
+    width: 76px;
+    min-height: 64px;
+  }
+
+  .school-accolade-details {
+    padding-left: 17px;
+  }
+
+  .school-accolade-details::before {
+    height: 64px;
   }
 
   .event-details {
