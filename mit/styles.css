@@ -310,7 +310,6 @@ li { margin-bottom: 10px; }
 }
 
 .tournament:hover {
-  background: var(--offwhite);
   text-decoration: none;
 }
 
