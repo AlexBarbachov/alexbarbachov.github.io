@@ -587,7 +587,8 @@ footer {
   body .subpage-header .mobile-back {
     position: relative;
     z-index: 1;
-    display: inline-block;
+    display: block;
+    width: 100%;
     color: var(--white);
     font-family: 'Inter', Arial, sans-serif;
     font-size: 0.95rem;
