@@ -430,6 +430,23 @@ footer {
   margin: 30px 0 34px;
 }
 
+.club-title {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+}
+
+.club-title h1 {
+  margin: 0;
+}
+
+.club-title img {
+  width: 180px;
+  height: 82px;
+  flex: 0 0 auto;
+  object-fit: contain;
+}
+
 .club-team-heading {
   margin: 0 0 16px;
   color: var(--black);
@@ -449,8 +466,8 @@ footer {
   align-items: center;
   min-height: 172px;
   padding: 22px 26px;
-  background: linear-gradient(110deg, #ffffff 0%, #f7f7f7 100%);
-  border: 1px solid #ececec;
+  background: linear-gradient(110deg, #f2f2f2 0%, #e9e9e9 100%);
+  border: 1px solid #dedede;
   border-radius: 20px;
   box-shadow: 0 8px 22px rgba(0, 0, 0, 0.10);
 }
@@ -474,36 +491,53 @@ footer {
   grid-area: placement;
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 4px;
+  justify-content: flex-start;
+  gap: 8px;
   min-width: 0;
-  color: var(--red-dark);
 }
 
 .placement-text {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  line-height: 0.9;
+  align-items: flex-start;
+  min-width: 80px;
+  line-height: 1;
 }
 
-.placement-text strong {
+.placement-rank {
+  display: flex;
+  align-items: flex-start;
+  white-space: nowrap;
+}
+
+.placement-rank strong {
+  color: var(--red-dark);
   font-family: 'Montserrat', Arial, sans-serif;
-  font-size: 3.3rem;
+  font-size: 4.7rem;
   font-weight: 800;
   letter-spacing: -0.08em;
+  line-height: 0.82;
 }
 
-.placement-text span {
-  margin-top: 12px;
+.placement-rank span {
+  margin: 5px 0 0 3px;
+  color: var(--black);
   font-family: 'Montserrat', Arial, sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+.placement-text .placement-label {
+  margin-top: 12px;
+  color: var(--black);
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 1.05rem;
   font-weight: 700;
 }
 
 .medal {
-  width: 66px;
-  height: 94px;
+  width: 54px;
+  height: 76px;
   object-fit: contain;
 }
 
@@ -529,7 +563,20 @@ footer {
 
 .event-details {
   grid-area: details;
+  position: relative;
   min-width: 0;
+  padding-left: 25px;
+}
+
+.event-details::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 1px;
+  height: 76px;
+  background: #c7c7c7;
+  transform: translateY(-50%);
 }
 
 .event-link {
@@ -540,6 +587,20 @@ footer {
 }
 
 @media (max-width: 760px) {
+  .club-title {
+    gap: 14px;
+  }
+
+  .club-title img {
+    width: 102px;
+    height: 52px;
+  }
+
+  .club-title h1 {
+    font-size: 1.95rem;
+    white-space: nowrap;
+  }
+
   .event-card {
     grid-template-columns: 86px minmax(0, 1fr);
     grid-template-areas:
@@ -553,21 +614,32 @@ footer {
 
   .event-placement {
     align-self: end;
+    align-items: flex-start;
     flex-direction: column;
+    gap: 6px;
   }
 
-  .placement-text strong {
-    font-size: 2.35rem;
+  .placement-text {
+    min-width: 0;
   }
 
-  .placement-text span {
-    margin-top: 8px;
-    font-size: 1.05rem;
+  .placement-rank strong {
+    font-size: 3.35rem;
+  }
+
+  .placement-rank span {
+    margin-top: 2px;
+    font-size: 0.85rem;
+  }
+
+  .placement-text .placement-label {
+    margin-top: 7px;
+    font-size: 0.9rem;
   }
 
   .medal {
-    width: 46px;
-    height: 64px;
+    width: 38px;
+    height: 54px;
   }
 
   .event-logo,
@@ -576,6 +648,14 @@ footer {
     height: 76px;
     justify-self: center;
     align-self: start;
+  }
+
+  .event-details {
+    padding-left: 18px;
+  }
+
+  .event-details::before {
+    height: 68px;
   }
 }
 
