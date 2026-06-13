@@ -165,6 +165,10 @@ main {
   padding: 0 20px 50px;
 }
 
+.hero + main {
+  margin-top: 14px;
+}
+
 .section { margin: 34px 0; }
 
 .section-heading p,
@@ -373,7 +377,7 @@ footer {
 
 .subpage-title { margin: 50px auto 60px; }
 .subpage-title h1 { font-size: clamp(2.5rem, 7vw, 5rem); }
-.subpage-main { margin-top: -35px; }
+.subpage-main { margin-top: 14px; }
 .detail-card { max-width: 900px; margin: 0 auto; }
 .detail-list li { margin-bottom: 14px; }
 
@@ -422,47 +426,85 @@ footer {
   }
 }
 
-/* Club achievements timeline */
-.timeline {
-  position: relative;
+.club-team-group {
   margin: 30px 0 34px;
-  padding-left: 34px;
 }
 
-.timeline::before {
-  content: "";
-  position: absolute;
-  top: 8px;
-  bottom: 8px;
-  left: 10px;
-  width: 3px;
-  background: linear-gradient(180deg, var(--red), var(--red-dark));
+.club-team-heading {
+  margin: 0 0 16px;
+  color: var(--black);
+  font-size: 1.35rem;
 }
 
-.timeline-item {
-  position: relative;
+.event-grid {
   display: grid;
-  grid-template-columns: 1fr;
-  margin-bottom: 24px;
+  gap: 16px;
 }
 
-.timeline-marker {
-  position: absolute;
-  top: 9px;
-  left: -32px;
-  width: 19px;
-  height: 19px;
+.event-card {
+  display: grid;
+  grid-template-columns: 170px minmax(0, 1fr) 112px;
+  grid-template-areas: "placement details logo";
+  gap: 24px;
+  align-items: center;
+  min-height: 172px;
+  padding: 22px 26px;
+  background: linear-gradient(110deg, #ffffff 0%, #f7f7f7 100%);
+  border: 1px solid #ececec;
+  border-radius: 20px;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.10);
+}
+
+.event-logo {
+  grid-area: logo;
+  width: 96px;
+  height: 96px;
+  justify-self: end;
+  object-fit: contain;
   background: var(--white);
-  border: 4px solid var(--red);
-  border-radius: 999px;
-  box-shadow: 0 0 0 5px rgba(237, 28, 36, 0.10);
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.14);
 }
 
-.timeline-content {
-  padding: 20px 22px;
-  background: var(--offwhite);
-  border: 1px solid var(--border);
-  border-left: 5px solid var(--red);
+.event-logo-wide {
+  width: 110px;
+}
+
+.event-placement {
+  grid-area: placement;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  min-width: 0;
+  color: var(--red-dark);
+}
+
+.placement-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 0.9;
+}
+
+.placement-text strong {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 3.3rem;
+  font-weight: 800;
+  letter-spacing: -0.08em;
+}
+
+.placement-text span {
+  margin-top: 12px;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.medal {
+  width: 66px;
+  height: 94px;
+  object-fit: contain;
 }
 
 .timeline-date {
@@ -472,7 +514,7 @@ footer {
   font-weight: 500;
 }
 
-.timeline-content h3 {
+.event-card h3 {
   margin: 0 0 8px;
   color: var(--black);
   font-size: 1.22rem;
@@ -481,8 +523,13 @@ footer {
   text-transform: none;
 }
 
-.timeline-content p {
+.event-card p {
   margin: 0 0 10px;
+}
+
+.event-details {
+  grid-area: details;
+  min-width: 0;
 }
 
 .event-link {
@@ -492,20 +539,45 @@ footer {
   font-weight: 600;
 }
 
-@media (max-width: 800px) {
-  .timeline {
-    padding-left: 28px;
+@media (max-width: 760px) {
+  .event-card {
+    grid-template-columns: 86px minmax(0, 1fr);
+    grid-template-areas:
+      "placement details"
+      "logo details";
+    gap: 14px 18px;
+    min-height: 0;
+    padding: 20px;
+    border-radius: 16px;
   }
 
-  .timeline-marker {
-    left: -30px;
+  .event-placement {
+    align-self: end;
+    flex-direction: column;
   }
 
-  .timeline-content {
-    padding: 18px;
+  .placement-text strong {
+    font-size: 2.35rem;
+  }
+
+  .placement-text span {
+    margin-top: 8px;
+    font-size: 1.05rem;
+  }
+
+  .medal {
+    width: 46px;
+    height: 64px;
+  }
+
+  .event-logo,
+  .event-logo-wide {
+    width: 76px;
+    height: 76px;
+    justify-self: center;
+    align-self: start;
   }
 }
-
 
 /* Lighter recruiting-site typography overrides */
 .nav a {

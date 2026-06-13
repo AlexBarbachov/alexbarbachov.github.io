@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 170" role="img" aria-labelledby="title">
+  <title id="title">Silver medal</title>
+  <path fill="#171a2d" d="M23 0h28l9 66-30 8z"/>
+  <path fill="#8f1728" d="M37 0h14l9 66-15 4z"/>
+  <path fill="#171a2d" d="M69 0h28L90 74l-30-8z"/>
+  <path fill="#8f1728" d="M69 0h14l-8 70-15-4z"/>
+  <circle cx="60" cy="108" r="47" fill="#878d94" stroke="#555b62" stroke-width="5"/>
+  <circle cx="60" cy="108" r="38" fill="#d9dde1" stroke="#f7f8f9" stroke-width="3"/>
+  <path d="M30 105c17-4 34-17 43-34M39 137c3-22 21-44 48-54M30 112c17 4 34 17 43 34M39 79c3 22 21 44 48 54" fill="none" stroke="#92989e" stroke-width="3"/>
+  <circle cx="60" cy="108" r="27" fill="none" stroke="#92989e" stroke-width="3"/>
+</svg>
