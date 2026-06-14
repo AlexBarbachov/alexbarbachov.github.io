@@ -288,6 +288,74 @@ li { margin-bottom: 10px; }
   font-weight: 600;
 }
 
+.video-card-grid {
+  display: grid;
+  gap: 16px;
+}
+
+.video-card {
+  display: grid;
+  grid-template-columns: minmax(260px, 42%) minmax(0, 1fr);
+  gap: 26px;
+  align-items: center;
+  padding: 20px 24px;
+  background: linear-gradient(110deg, #f2f2f2 0%, #e9e9e9 100%);
+  border: 1px solid #dedede;
+  border-radius: 20px;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.10);
+}
+
+.video-card-player {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: var(--black);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.14);
+}
+
+.video-card-player iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.video-card-placeholder {
+  background: #d8d8d8;
+  box-shadow: none;
+}
+
+.video-card-details {
+  position: relative;
+  min-width: 0;
+  padding-left: 26px;
+}
+
+.video-card-details::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 1px;
+  height: 76px;
+  background: #c7c7c7;
+  transform: translateY(-50%);
+}
+
+.video-card-details h3 {
+  margin: 0;
+  color: var(--black);
+  font-size: 1.22rem;
+  line-height: 1.3;
+}
+
+.video-card-details p {
+  margin: 5px 0 0;
+  color: var(--muted);
+  line-height: 1.4;
+}
+
 .academic-layout {
   display: grid;
   grid-template-columns: 240px 1fr;
@@ -393,6 +461,23 @@ footer {
   .two-column,
   .academic-layout,
   .tournament-grid { grid-template-columns: 1fr; }
+
+  .video-card {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    padding: 18px;
+  }
+
+  .video-card-details {
+    padding: 16px 0 0;
+  }
+
+  .video-card-details::before {
+    top: 0;
+    width: 76px;
+    height: 1px;
+    transform: none;
+  }
   .hero-content { margin: 44px auto 60px; }
   .card-logo-wide { width: 130px; }
 
@@ -442,6 +527,12 @@ footer {
   font-size: 1.35rem;
 }
 
+.school-season-role {
+  margin: -10px 0 16px;
+  color: var(--muted);
+  font-weight: 600;
+}
+
 .event-grid {
   display: grid;
   gap: 16px;
@@ -465,6 +556,13 @@ footer {
   object-fit: contain;
 }
 
+.school-heading .club-heading-logo {
+  width: 150px;
+  height: 54px;
+  padding: 10px;
+  background: var(--black);
+}
+
 .school-heading h2 {
   margin: 0;
 }
@@ -476,6 +574,38 @@ footer {
   font-family: 'Inter', Arial, sans-serif;
   font-weight: 600;
   line-height: 1.3;
+}
+
+.college-logos {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  flex-wrap: wrap;
+  margin-top: 22px;
+}
+
+.college-logos a {
+  display: flex;
+  align-items: center;
+  min-height: 72px;
+}
+
+.college-logos img {
+  display: block;
+  width: auto;
+  max-width: 190px;
+  max-height: 72px;
+  object-fit: contain;
+}
+
+.college-logos .college-logo-dvc {
+  max-width: 285px;
+  max-height: 100px;
+}
+
+.college-logos .academic-logo-mvhs {
+  width: 82px;
+  height: 82px;
 }
 
 .school-accolade-card {
@@ -503,6 +633,11 @@ footer {
   margin: 4px 0 0;
   color: var(--muted);
   line-height: 1.35;
+}
+
+.school-accolade-link {
+  color: var(--red-dark);
+  font-weight: 600;
 }
 
 .school-accolade-image {
@@ -748,6 +883,30 @@ footer {
   .school-heading img {
     width: 50px;
     height: 50px;
+  }
+
+  .school-heading .club-heading-logo {
+    width: 130px;
+    height: 54px;
+  }
+
+  .college-logos {
+    gap: 18px;
+  }
+
+  .college-logos img {
+    max-width: 145px;
+    max-height: 58px;
+  }
+
+  .college-logos .college-logo-dvc {
+    max-width: 210px;
+    max-height: 80px;
+  }
+
+  .college-logos .academic-logo-mvhs {
+    width: 64px;
+    height: 64px;
   }
 
   .school-accolade-image {
