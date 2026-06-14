@@ -922,6 +922,14 @@ footer {
     display: none;
   }
 
+  main.subpage-main > .detail-card:first-child {
+    padding-top: 18px;
+  }
+
+  .detail-card .club-team-group:first-of-type {
+    margin-top: 0;
+  }
+
   .college-logos {
     gap: 18px;
   }
