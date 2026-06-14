@@ -96,6 +96,34 @@ a:hover { text-decoration: underline; }
   max-width: 1060px;
 }
 
+.hero-content-with-photo {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 300px;
+  align-items: center;
+  gap: 28px;
+  margin-top: 28px;
+  margin-bottom: 0;
+}
+
+.hero-athlete-frame {
+  height: 390px;
+  align-self: center;
+  overflow: hidden;
+}
+
+.hero-athlete-photo {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  transform: translateY(-4px);
+}
+
+.hero-copy {
+  align-self: center;
+  min-width: 0;
+}
+
 .eyebrow {
   color: var(--red);
   font-family: 'Montserrat', Arial, sans-serif;
@@ -454,6 +482,21 @@ footer {
 .subpage-main .detail-card { padding-top: 22px; }
 .detail-card .club-team-group:first-child { margin-top: 0; }
 .detail-list li { margin-bottom: 14px; }
+
+@media (max-width: 1100px) {
+  .hero-content-with-photo {
+    display: block;
+    margin-bottom: 80px;
+  }
+
+  .hero-athlete-photo {
+    display: none;
+  }
+
+  .hero-athlete-frame {
+    display: none;
+  }
+}
 
 @media (max-width: 800px) {
   .nav { justify-content: flex-start; gap: 14px; }
