@@ -1,0 +1,1040 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800;900&family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --black: #0d0d0f;
+  --charcoal: #18181b;
+  --dark: #222226;
+  --red: #ed1c24;
+  --red-dark: #b9151b;
+  --white: #ffffff;
+  --offwhite: #f5f5f5;
+  --text: #222226;
+  --muted: #6b7280;
+  --border: #e5e7eb;
+  --shadow: 0 18px 40px rgba(0, 0, 0, 0.10);
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+  background: var(--offwhite);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+a {
+  color: var(--red-dark);
+  text-decoration: none;
+}
+
+a:hover { text-decoration: underline; }
+
+.hero,
+.subpage-header {
+  position: relative;
+  overflow: hidden;
+  color: var(--white);
+  padding: 24px;
+  background:
+    radial-gradient(circle at 75% 20%, rgba(237, 28, 36, 0.30), transparent 28%),
+    linear-gradient(135deg, #050505 0%, var(--black) 45%, var(--charcoal) 100%);
+  border-bottom: 5px solid var(--red);
+}
+
+.hero::before,
+.subpage-header::before {
+  content: "";
+  position: absolute;
+  inset: auto -12% 10% auto;
+  width: 55%;
+  height: 220px;
+  background: linear-gradient(135deg, transparent 0 35%, rgba(237, 28, 36, 0.95) 35% 48%, transparent 48% 58%, rgba(255,255,255,0.95) 58% 70%, transparent 70%);
+  opacity: 0.18;
+  transform: skewX(-20deg);
+  pointer-events: none;
+}
+
+.nav {
+  position: relative;
+  z-index: 1;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+  flex-wrap: wrap;
+  border-top: 2px solid var(--red);
+  padding-top: 14px;
+}
+
+.nav a {
+  color: var(--white);
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-weight: 800;
+  font-size: 0.82rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.mobile-back {
+  display: none;
+}
+
+.hero-content,
+.subpage-title {
+  position: relative;
+  z-index: 1;
+  max-width: 1100px;
+  margin: 70px auto 80px;
+}
+
+.hero-content {
+  max-width: 1060px;
+}
+
+.hero-content-with-photo {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 300px;
+  align-items: center;
+  gap: 28px;
+  margin-top: 28px;
+  margin-bottom: 0;
+}
+
+.hero-athlete-frame {
+  height: 390px;
+  align-self: center;
+  overflow: hidden;
+}
+
+.hero-athlete-photo {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  transform: translateY(-4px);
+}
+
+.hero-copy {
+  align-self: center;
+  min-width: 0;
+}
+
+.eyebrow {
+  color: var(--red);
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-weight: 900;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+h1, h2, h3 {
+  font-family: 'Montserrat', Arial, sans-serif;
+  letter-spacing: -0.03em;
+}
+
+h1 {
+  font-size: clamp(3rem, 8vw, 6rem);
+  line-height: 0.92;
+  margin: 12px 0;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+h2 {
+  color: var(--black);
+  margin-top: 0;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.subtitle {
+  max-width: 780px;
+  font-size: 1.22rem;
+  color: rgba(255,255,255,0.88);
+}
+
+.hero-actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 28px;
+}
+
+.hero-actions .button {
+  width: 260px;
+  text-align: center;
+}
+
+.button {
+  display: inline-block;
+  padding: 12px 20px;
+  border-radius: 0;
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.button.primary {
+  background: var(--red);
+  color: var(--white);
+  box-shadow: 6px 6px 0 rgba(255,255,255,0.14);
+}
+
+.button.secondary {
+  border: 2px solid rgba(255,255,255,0.82);
+  color: var(--white);
+}
+
+main {
+  max-width: 1100px;
+  margin: -40px auto 0;
+  padding: 0 20px 50px;
+}
+
+.hero + main {
+  margin-top: 14px;
+}
+
+.section { margin: 34px 0; }
+
+.section-heading p,
+.muted,
+.date,
+.stat span {
+  color: var(--muted);
+}
+
+.card,
+.stat {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 0;
+  box-shadow: var(--shadow);
+}
+
+.card { padding: 30px; }
+
+.card > h2:first-child {
+  padding-top: 0;
+}
+
+main > .card:first-child {
+  padding-top: 44px;
+}
+
+.card-heading {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card-heading h2 {
+  margin: 0;
+}
+
+.card-logo {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-logo img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.card-logo-wide {
+  width: 150px;
+  height: 54px;
+  padding: 10px;
+  background: var(--black);
+}
+
+.card-logo-square {
+  width: 70px;
+  height: 70px;
+}
+
+.grid { display: grid; gap: 16px; }
+.stats-grid { grid-template-columns: repeat(4, 1fr); }
+
+.stat {
+  padding: 20px;
+  border-top: 4px solid var(--red);
+}
+
+.stat span,
+.date { font-size: 0.95rem; }
+
+.stat strong {
+  display: block;
+  color: var(--black);
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 1.15rem;
+  margin-top: 4px;
+  text-transform: uppercase;
+}
+
+.two-column {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+}
+
+ul { padding-left: 22px; }
+li { margin-bottom: 10px; }
+
+.highlight-card {
+  border-left: 10px solid var(--red);
+}
+
+.video-embed {
+  width: min(100%, 560px);
+  margin: 22px 0;
+  aspect-ratio: 16 / 9;
+  background: var(--black);
+}
+
+.video-embed iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.video-caption {
+  margin: -10px 0 18px;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.video-card-grid {
+  display: grid;
+  gap: 16px;
+}
+
+.video-card {
+  display: grid;
+  grid-template-columns: minmax(260px, 42%) minmax(0, 1fr);
+  gap: 26px;
+  align-items: center;
+  padding: 20px 24px;
+  background: linear-gradient(110deg, #f2f2f2 0%, #e9e9e9 100%);
+  border: 1px solid #dedede;
+  border-radius: 20px;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.10);
+}
+
+.video-card-player {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: var(--black);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.14);
+}
+
+.video-card-player iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.video-card-placeholder {
+  background: #d8d8d8;
+  box-shadow: none;
+}
+
+.video-card-details {
+  position: relative;
+  min-width: 0;
+  padding-left: 26px;
+}
+
+.video-card-details::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 1px;
+  height: 76px;
+  background: #c7c7c7;
+  transform: translateY(-50%);
+}
+
+.video-card-details h3 {
+  margin: 0;
+  color: var(--black);
+  font-size: 1.22rem;
+  line-height: 1.3;
+}
+
+.video-card-details p {
+  margin: 5px 0 0;
+  color: var(--muted);
+  line-height: 1.4;
+}
+
+.academic-layout {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+.large-stat {
+  color: var(--red);
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 2.4rem;
+  font-weight: 900;
+  margin: 0;
+}
+
+.tournament-grid {
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0;
+  margin: 0 -30px -30px;
+}
+
+.tournament {
+  display: flex;
+  gap: 22px;
+  align-items: center;
+  padding: 30px;
+  color: var(--text);
+}
+
+.tournament:hover {
+  text-decoration: none;
+}
+
+.tournament-logo {
+  width: 92px;
+  height: 92px;
+  flex: 0 0 auto;
+  object-fit: contain;
+}
+
+.tournament-details {
+  display: grid;
+  gap: 6px;
+}
+
+.tournament-details strong {
+  color: var(--black);
+  font-size: 1.1rem;
+}
+
+.schedule-meta {
+  margin: -8px 0 22px;
+  color: var(--red);
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.055em;
+  text-transform: uppercase;
+}
+
+.tournament-schedule {
+  color: var(--red-dark);
+  font-weight: 600;
+}
+
+.contact-card {
+  background: var(--black);
+  color: var(--white);
+  border-radius: 0;
+  padding: 34px;
+  border-top: 5px solid var(--red);
+  box-shadow: var(--shadow);
+}
+
+.contact-card h2,
+.contact-card a { color: var(--white); }
+
+footer {
+  text-align: center;
+  color: var(--muted);
+  padding: 28px;
+  border-top: 1px solid var(--border);
+}
+
+.see-more {
+  color: var(--red-dark);
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.subpage-title { margin: 50px auto 60px; }
+.subpage-title h1 { font-size: clamp(2.5rem, 7vw, 5rem); }
+.subpage-main { margin-top: 14px; }
+.detail-card { max-width: 900px; margin: 0 auto; }
+.subpage-main .detail-card { padding-top: 22px; }
+.detail-card .club-team-group:first-child { margin-top: 0; }
+.detail-list li { margin-bottom: 14px; }
+
+@media (max-width: 1100px) {
+  .hero-content-with-photo {
+    display: block;
+    margin-bottom: 80px;
+  }
+
+  .hero-athlete-photo {
+    display: none;
+  }
+
+  .hero-athlete-frame {
+    display: none;
+  }
+}
+
+@media (max-width: 800px) {
+  .nav { justify-content: flex-start; gap: 14px; }
+  .stats-grid,
+  .two-column,
+  .academic-layout,
+  .tournament-grid { grid-template-columns: 1fr; }
+
+  .video-card {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    padding: 18px;
+  }
+
+  .video-card-details {
+    padding: 16px 0 0;
+  }
+
+  .video-card-details::before {
+    top: 0;
+    width: 76px;
+    height: 1px;
+    transform: none;
+  }
+  .hero-content { margin: 44px auto 60px; }
+  .card-logo-wide { width: 130px; }
+
+  .hero-actions .button {
+    width: min(100%, 320px);
+  }
+
+  .stats-grid {
+    gap: 0;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-top: 4px solid var(--red);
+    box-shadow: var(--shadow);
+  }
+
+  .stats-grid .stat {
+    display: grid;
+    grid-template-columns: minmax(130px, 0.8fr) minmax(0, 1.2fr);
+    gap: 18px;
+    align-items: center;
+    border: 0;
+    border-bottom: 1px solid var(--border);
+    box-shadow: none;
+  }
+
+  .stats-grid .stat strong {
+    margin-top: 0;
+  }
+
+  .stats-grid .stat:last-child {
+    border-bottom: 0;
+  }
+
+  .tournament-logo {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+.club-team-group {
+  margin: 30px 0 34px;
+}
+
+.club-team-heading {
+  margin: 0 0 16px;
+  color: var(--black);
+  font-size: 1.35rem;
+}
+
+.school-season-role {
+  margin: -10px 0 16px;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.event-grid {
+  display: grid;
+  gap: 16px;
+}
+
+.school-accolade-grid {
+  display: grid;
+  gap: 16px;
+}
+
+.school-heading {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.school-heading img {
+  width: 64px;
+  height: 64px;
+  flex: 0 0 auto;
+  object-fit: contain;
+}
+
+.school-heading .club-heading-logo {
+  width: 150px;
+  height: 54px;
+  padding: 10px;
+  background: var(--black);
+}
+
+.school-heading h2 {
+  margin: 0;
+}
+
+.school-site-link {
+  display: inline-block;
+  margin-top: 4px;
+  color: var(--red-dark);
+  font-family: 'Inter', Arial, sans-serif;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.college-logos {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  flex-wrap: wrap;
+  margin-top: 22px;
+}
+
+.college-logos a {
+  display: flex;
+  align-items: center;
+  min-height: 72px;
+}
+
+.college-logos img {
+  display: block;
+  width: auto;
+  max-width: 190px;
+  max-height: 72px;
+  object-fit: contain;
+}
+
+.college-logos .college-logo-dvc {
+  max-width: 285px;
+  max-height: 100px;
+}
+
+.college-logos .academic-logo-mvhs {
+  width: 82px;
+  height: 82px;
+}
+
+.school-accolade-card {
+  display: grid;
+  grid-template-columns: 100px minmax(0, 1fr);
+  align-items: center;
+  gap: 24px;
+  min-height: 110px;
+  padding: 22px 26px;
+  background: linear-gradient(110deg, #f2f2f2 0%, #e9e9e9 100%);
+  border: 1px solid #dedede;
+  border-radius: 20px;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.10);
+}
+
+.school-accolade-card h3 {
+  margin: 0;
+  color: var(--black);
+  font-size: 1.22rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.school-accolade-card p {
+  margin: 4px 0 0;
+  color: var(--muted);
+  line-height: 1.35;
+}
+
+.school-accolade-link {
+  color: var(--red-dark);
+  font-weight: 600;
+}
+
+.school-accolade-image {
+  width: 100px;
+  height: 112px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.14);
+}
+
+.school-accolade-image-landscape {
+  object-fit: contain;
+  background: var(--white);
+}
+
+.school-accolade-marker {
+  width: 100px;
+  min-height: 76px;
+}
+
+.school-accolade-details {
+  position: relative;
+  min-width: 0;
+  padding-left: 25px;
+}
+
+.school-accolade-details::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 1px;
+  height: 76px;
+  background: #c7c7c7;
+  transform: translateY(-50%);
+}
+
+.event-card {
+  display: grid;
+  grid-template-columns: 170px minmax(0, 1fr) 112px;
+  grid-template-areas: "placement details logo";
+  gap: 24px;
+  align-items: center;
+  min-height: 150px;
+  padding: 16px 24px;
+  background: linear-gradient(110deg, #f2f2f2 0%, #e9e9e9 100%);
+  border: 1px solid #dedede;
+  border-radius: 20px;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.10);
+}
+
+.event-logo {
+  grid-area: logo;
+  width: 96px;
+  height: 96px;
+  justify-self: end;
+  object-fit: contain;
+  background: var(--white);
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.14);
+}
+
+.event-logo-wide {
+  width: 110px;
+}
+
+.event-placement {
+  grid-area: placement;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+  min-width: 0;
+}
+
+.placement-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 80px;
+  line-height: 1;
+}
+
+.placement-rank {
+  display: flex;
+  align-items: flex-start;
+  white-space: nowrap;
+}
+
+.placement-rank strong {
+  color: var(--red-dark);
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 4.7rem;
+  font-weight: 800;
+  letter-spacing: -0.08em;
+  line-height: 0.82;
+}
+
+.placement-rank span {
+  margin: 5px 0 0 3px;
+  color: var(--black);
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+.placement-text .placement-label {
+  margin-top: 12px;
+  color: var(--black);
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.medal {
+  width: 43px;
+  height: 61px;
+  object-fit: contain;
+}
+
+.timeline-date {
+  margin: 0 0 1px;
+  color: var(--muted);
+  font-size: 0.92rem;
+  font-weight: 500;
+  line-height: 1.25;
+}
+
+.event-card h3 {
+  margin: 0 0 3px;
+  color: var(--black);
+  font-size: 1.22rem;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  line-height: 1.25;
+  text-transform: none;
+}
+
+.event-card p {
+  margin: 0 0 4px;
+  line-height: 1.35;
+}
+
+.event-details {
+  grid-area: details;
+  position: relative;
+  min-width: 0;
+  padding-left: 25px;
+}
+
+.event-details::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 1px;
+  height: 76px;
+  background: #c7c7c7;
+  transform: translateY(-50%);
+}
+
+.event-link {
+  display: inline-block;
+  color: var(--red-dark);
+  font-family: 'Inter', Arial, sans-serif;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+@media (max-width: 800px) {
+  body .subpage-header .nav {
+    display: none !important;
+  }
+
+  body .subpage-header .mobile-back {
+    position: relative;
+    z-index: 1;
+    display: block;
+    width: 100%;
+    color: var(--white);
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border-top: 2px solid var(--red);
+    padding-top: 10px;
+  }
+
+  .event-card {
+    grid-template-columns: 86px minmax(0, 1fr);
+    grid-template-areas: "placement details";
+    gap: 14px 18px;
+    align-items: start;
+    min-height: 0;
+    padding: 15px 18px;
+    border-radius: 16px;
+  }
+
+  .event-placement {
+    align-self: start;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .placement-text {
+    min-width: 0;
+  }
+
+  .placement-rank strong {
+    font-size: 3.35rem;
+  }
+
+  .placement-rank span {
+    margin-top: 2px;
+    font-size: 0.85rem;
+  }
+
+  .placement-text .placement-label {
+    margin-top: 7px;
+    font-size: 0.9rem;
+  }
+
+  .medal {
+    width: 30px;
+    height: 43px;
+  }
+
+  .event-card > .event-logo,
+  .event-card > .event-logo-wide {
+    display: none !important;
+  }
+
+  .school-accolade-card {
+    grid-template-columns: 76px minmax(0, 1fr);
+    gap: 16px;
+  }
+
+  .school-heading {
+    display: none;
+  }
+
+  main.subpage-main > .detail-card:first-child {
+    padding-top: 18px;
+  }
+
+  .detail-card .club-team-group:first-of-type {
+    margin-top: 0;
+  }
+
+  .college-logos {
+    gap: 18px;
+  }
+
+  .college-logos img {
+    max-width: 145px;
+    max-height: 58px;
+  }
+
+  .college-logos .college-logo-dvc {
+    max-width: 210px;
+    max-height: 80px;
+  }
+
+  .college-logos .academic-logo-mvhs {
+    width: 64px;
+    height: 64px;
+  }
+
+  .school-accolade-image {
+    width: 76px;
+    height: 92px;
+  }
+
+  .school-accolade-marker {
+    width: 76px;
+    min-height: 64px;
+  }
+
+  .school-accolade-details {
+    padding-left: 17px;
+  }
+
+  .school-accolade-details::before {
+    height: 64px;
+  }
+
+  .event-details {
+    align-self: start;
+    padding-left: 18px;
+  }
+
+  .event-details::before {
+    height: 68px;
+  }
+
+}
+
+/* Lighter recruiting-site typography overrides */
+.nav a {
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 0.84rem;
+  letter-spacing: 0.015em;
+  text-transform: none;
+}
+
+.eyebrow {
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.055em;
+  text-transform: none;
+}
+
+h1, h2, h3 {
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+  letter-spacing: -0.025em;
+}
+
+h1 {
+  font-weight: 650;
+  text-transform: none;
+  line-height: 1.02;
+}
+
+h2 {
+  font-weight: 600;
+  text-transform: none;
+  letter-spacing: -0.02em;
+}
+
+h3,
+.tournament h3,
+.stat strong {
+  font-weight: 600;
+  text-transform: none;
+}
+
+.subtitle {
+  font-weight: 400;
+}
+
+.button,
+.see-more {
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  text-transform: none;
+  letter-spacing: 0.01em;
+}
+
+.large-stat {
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+  font-weight: 600;
+}
+
+.subpage-title h1 {
+  font-weight: 650;
+}
