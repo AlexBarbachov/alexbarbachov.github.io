@@ -627,6 +627,22 @@ footer {
   margin-top: 22px;
 }
 
+.course-groups {
+  margin-top: 0;
+}
+
+.course-group {
+  margin-bottom: 14px;
+}
+
+.course-group > strong {
+  color: var(--black);
+}
+
+.course-group ul {
+  margin-top: 6px;
+}
+
 .college-logos a {
   display: flex;
   align-items: center;
