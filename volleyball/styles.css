@@ -400,7 +400,7 @@ li { margin-bottom: 10px; }
 }
 
 .tournament-grid {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 18px;
   margin: 0;
   align-items: stretch;
@@ -437,10 +437,6 @@ a.tournament:hover {
   height: 112px;
   object-fit: contain;
   object-position: left center;
-}
-
-.reckoning-logo {
-  width: 100%;
 }
 
 .tournament-details {
